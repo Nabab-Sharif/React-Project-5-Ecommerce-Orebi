@@ -2,7 +2,7 @@ import { HiMiniBars3 } from "react-icons/hi2";
 import { IoIosSearch } from "react-icons/io";
 import { FaUser } from "react-icons/fa";
 import { FaCartPlus } from "react-icons/fa6";
-import { IoCaretDownCircle } from "react-icons/io5";
+import { FaCaretDown } from "react-icons/fa";
 
 
 
@@ -30,7 +30,7 @@ const SearchBar = () => {
 
               <div className="flex items-center gap-x-[10px] cursor-pointer">
                 <FaUser className="text-xl text-[#262626]" />
-                <IoCaretDownCircle />
+                <FaCaretDown />
               </div>
 
               <div className="cursor-pointer">
