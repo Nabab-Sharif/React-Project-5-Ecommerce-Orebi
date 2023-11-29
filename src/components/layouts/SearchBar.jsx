@@ -5,14 +5,17 @@ import { FaCartPlus } from "react-icons/fa6";
 import { FaCaretDown } from "react-icons/fa";
 import Cart from "../Cart";
 import { useEffect, useRef, useState } from "react";
+import UserAccount from "../UserAccount";
 
 
 
 const SearchBar = () => {
 
   let [showCart, setShowCart] = useState(false);
-
   let cartref = useRef();
+
+  let [showUserAccount, setShowUserAccount] = useState(false);
+  let userAccountRef = useRef();
 
   useEffect(() => {
     document.body.addEventListener('click', (e) => {
@@ -22,6 +25,13 @@ const SearchBar = () => {
       } else {
         setShowCart(false)
       }
+
+      if (userAccountRef.current.contains(e.target)) {
+        setShowUserAccount(true);
+      } else {
+        setShowUserAccount(false);
+      }
+
     })
   }, []);
 
@@ -41,13 +51,13 @@ const SearchBar = () => {
 
           <div className="flex justify-between">
 
-            {/* left part */}
+            {/* left part sidebar */}
             <div className="flex gap-x-[10px] items-center cursor-pointer ">
               <HiMiniBars3 />
               <span className="font-dm text-[14px] capitalize font-normal">shop by category</span>
             </div>
 
-            {/* middle part */}
+            {/* middle part search field */}
             <div className="w-[600px] relative">
               <search>
                 <input className="py-4 px-5 w-full pr-10" placeholder="Search Product" />
@@ -55,12 +65,17 @@ const SearchBar = () => {
               <IoIosSearch className="absolute right-4 top-[50%] translate-y-[-50%] text-2xl" />
             </div>
 
-            {/* right part */}
+            {/* right part userAccount and cart */}
             <div className="flex items-center gap-x-10">
 
-              <div className="flex items-center gap-x-[10px] cursor-pointer">
-                <FaUser className="text-xl text-[#262626]" />
-                <FaCaretDown />
+              <div ref={userAccountRef} className="relative">
+                <div className="flex items-center gap-x-[10px] cursor-pointer">
+                  <FaUser className="text-xl text-[#262626]" />
+                  <FaCaretDown onClick={() => setShowUserAccount(!showUserAccount)} />
+                </div>
+
+                {showUserAccount && <UserAccount />}
+
               </div>
 
               <div ref={cartref} className="cursor-pointer relative">
