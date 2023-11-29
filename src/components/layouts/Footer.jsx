@@ -150,14 +150,14 @@ const Footer = () => {
 
           {/* copy right part */}
           <div className='flex justify-between mt-[65px]'>
-            <div className='flex gap-x-[26px] '>
+            <div className='flex gap-x-[26px] cursor-pointer '>
               <FaFacebookF className='text-[#262626] text-[16px]' />
               <FaLinkedinIn className='text-[#262626] text-[16px]' />
               <FaInstagram className='text-[#262626] text-[16px]' />
             </div>
 
             <div>
-              <p className='font-dm text-[#6D6D6D] text-[14px] font-normal leading-6 not-italic'>2020 Orebi Minimal eCommerce Figma Template by Adveits</p>
+              <p className='font-dm text-[#6D6D6D] text-[14px] font-normal leading-6 not-italic cursor-pointer'>2023 Orebi Minimal eCommerce Figma Template by Adveits</p>
             </div>
           </div>
 
