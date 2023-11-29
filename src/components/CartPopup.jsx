@@ -1,7 +1,7 @@
 import { RxCross2 } from "react-icons/rx";
 
 
-const Cart = () => {
+const CartPopup = () => {
   return (
     <>
       <div className="absolute right-0 mt-4 w-[360px] border-[1px] border-[#F0F0F0]">
@@ -66,4 +66,4 @@ const Cart = () => {
   )
 }
 
-export default Cart
+export default CartPopup;
