@@ -1,4 +1,5 @@
 import { RxCross2 } from "react-icons/rx";
+import { Link } from "react-router-dom";
 
 
 const CartPopup = () => {
@@ -50,13 +51,16 @@ const CartPopup = () => {
         </div>
 
 
-        {/* button here */}
+        {/*view cart and checkout button here */}
         <div className="bg-white px-5 pt-[14px] pb-5">
           <h4 className="font-dm text-base leading-[23px] font-normal">Subtotal: <span className="font-bold text-[#262626]">$44.00</span> </h4>
 
           <div className="mt-[13px] flex justify-between ">
-            <a className=" inline-block py-4 px-10 border-[1px] border-[#282828] text-black text-[14px] font-dm font-bold capitalize transition-all duration-300 hover:bg-black hover:text-white " href="#">view cart</a>
-            <a className=" inline-block py-4 px-10 border-[1px] border-[#282828] text-black text-[14px] font-dm font-bold capitalize transition-all duration-300 hover:bg-black hover:text-white " href="#">checkout</a>
+
+            <Link to="/cart" className=" inline-block py-4 px-10 border-[1px] border-[#282828] text-black text-[14px] font-dm font-bold capitalize transition-all duration-300 hover:bg-black hover:text-white ">view cart</Link>
+
+            <Link to="/checkout" className=" inline-block py-4 px-10 border-[1px] border-[#282828] text-black text-[14px] font-dm font-bold capitalize transition-all duration-300 hover:bg-black hover:text-white ">checkout</Link>
+
           </div>
         </div>
 

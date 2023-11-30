@@ -6,6 +6,8 @@ import Shop from "./pages/shop/Shop"
 import About from "./pages/about/About"
 import Contact from "./pages/contact/Contact"
 import Journal from "./pages/journal/Journal"
+import CartPage from "./pages/viewCart/CartPage"
+import CheckoutPage from "./pages/checkout/CheckoutPage"
 
 
 
@@ -21,6 +23,8 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/journal" element={<Journal />} />
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="/checkout" element={<CheckoutPage />} />
           <Route path="*" element={<Error />} />
         </Route>
       </>
