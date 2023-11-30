@@ -6,7 +6,6 @@ const CartPopup = () => {
     <>
       <div className="absolute right-0 mt-4 w-[360px] border-[1px] border-[#F0F0F0]">
 
-
         <div className="p-5 bg-[#F5F5F3] flex flex-col gap-y-3">
 
           {/* items start here */}
