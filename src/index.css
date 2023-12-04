@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* common style here */
+
+@layer components {
+
+  .checkoutHeading {
+    @apply mt-[130px] text-[39px] font-bold font-dm
+  }
+
+  .checkoutInput {
+    @apply w-full border-b-[1px] pt-[10px] pb-4 border-[#F0F0F0] outline-none
+  }
+
+}

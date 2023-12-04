@@ -12,6 +12,9 @@ const CheckoutPage = () => {
 
   let [couponShow, setCouponShow] = useState(false)
 
+  let countries = ['Bangladesh', 'India', 'Nepal', 'Pakistan', 'Thailan'];
+
+
 
   return (
     <>
@@ -41,6 +44,80 @@ const CheckoutPage = () => {
           }
           {/* coupon part End here */}
 
+
+          {/* form Start here */}
+          <div>
+            <h3 className="mt-[120px] checkoutHeading">Billing Details</h3>
+            <form className="mt-[42px]">
+
+              <div className="flex gap-x-[40px] items-center">
+                <div className="w-1/2">
+                  <label className="text-base text-[#262626] leading-[23px] font-dm font-bold">First Name *</label>
+                  <input className="checkoutInput" type="text" placeholder="First Name" name="firstName" />
+                </div>
+
+                <div className="w-1/2">
+                  <label className="text-base text-[#262626] leading-[23px] font-dm font-bold">Last Name *</label>
+                  <input className="checkoutInput" type="text" placeholder="Last Name" name="lastName" />
+                </div>
+              </div>
+
+              <div className="w-full mt-6">
+                <label className="text-base text-[#262626] leading-[23px] font-dm font-bold">Company Name (Optional)</label>
+                <input className="checkoutInput" type="text" placeholder="Company Name" name="companyName" />
+              </div>
+
+              <div className="w-full mt-6">
+                <label className="text-base text-[#262626] leading-[23px] font-dm font-bold">Country *</label>
+                <select className="w-full border-b-[1px] pt-[10px] pb-4 border-[#F0F0F0] outline-none " name="country">
+                  {
+                    countries.map((item, index) => (
+                      <option key={index}>{item}</option>
+                    ))
+                  }
+                </select>
+                {/* <input className="w-full border-b-[1px] pt-[10px] pb-4 border-red-600 outline-none " type="text" placeholder="Country" name="country" /> */}
+              </div>
+
+              <div className="w-full mt-6">
+                <label className="text-base text-[#262626] leading-[23px] font-dm font-bold">Street Address *</label>
+                <input className="checkoutInput" type="text" placeholder="House Number and Street Name" name="streetAddress" />
+              </div>
+
+              <div className="w-full mt-6">
+                <label className="text-base text-[#262626] leading-[23px] font-dm font-bold">City/Town *</label>
+                <input className="checkoutInput" type="text" placeholder="City/Town" name="cityTown" />
+              </div>
+
+              <div className="w-full mt-6">
+                <label className="text-base text-[#262626] leading-[23px] font-dm font-bold">Country (Optional)</label>
+                <input className="checkoutInput" type="text" placeholder="Country (Optional)" name="countryOptional" />
+              </div>
+
+              <div className="w-full mt-6">
+                <label className="text-base text-[#262626] leading-[23px] font-dm font-bold">Post Code *</label>
+                <input className="w-full border-b-[1px] pt-[10px] pb-4 border-[#F0F0F0] outline-none appearance-none" type="number" placeholder="Post Code" name="postCode" />
+              </div>
+
+              <div className="w-full mt-6">
+                <label className="text-base text-[#262626] leading-[23px] font-dm font-bold">Phone *</label>
+                <input className="checkoutInput appearance-none " type="number" placeholder="Phone" name="phone" />
+              </div>
+
+              <div className="w-full mt-6">
+                <label className="text-base text-[#262626] leading-[23px] font-dm font-bold">Email Address *</label>
+                <input className="checkoutInput" type="email" placeholder="Email" name="emailAddress" />
+              </div>
+
+            </form>
+
+            <h3 className="checkoutHeading">Additional Information</h3>
+            <div>
+              <textarea className="block w-full h-[138px] border-b-[1px] border-[#F0F0F0] outline-none  placeholder:text-base  placeholder:text-[#262626]  placeholder:font-dm  placeholder:font-bold  placeholder:leading-[27px]" placeholder={'Other Notes (optional) \nNotes about your order, e.g. special notes for delivery.'} /> 
+            </div>
+
+          </div>
+          {/* form End here */}
 
         </div>
       </section>
