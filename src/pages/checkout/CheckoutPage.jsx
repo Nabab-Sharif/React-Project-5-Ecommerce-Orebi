@@ -117,7 +117,7 @@ const CheckoutPage = () => {
               <h3 className="checkoutHeading">Additional Information</h3>
               <div className="mt-[42px]">
                 <label className="font-bold text-[#262626] text-[16px] leading-[27px]">Other Notes (optional)</label>
-                <textarea className="resize-none block w-full h-[138px] mt-[10px] border-b-[1px] border-[#F0F0F0] outline-none  placeholder:text-[14px] placeholder:font-normal placeholder:text-[#767676]  placeholder:font-dm " placeholder={'Notes about your order, e.g. special notes for delivery.'} />
+                <textarea className="resize-none overflow-hidden block w-full h-[138px] mt-[10px] border-b-[1px] border-[#F0F0F0] outline-none  placeholder:text-[14px] placeholder:font-normal placeholder:text-[#767676]  placeholder:font-dm " placeholder={'Notes about your order, e.g. special notes for delivery.'} />
               </div>
 
             </div>
