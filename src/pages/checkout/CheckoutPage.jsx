@@ -96,12 +96,12 @@ const CheckoutPage = () => {
 
               <div className="w-full mt-6">
                 <label className="text-base text-[#262626] leading-[23px] font-dm font-bold">Post Code *</label>
-                <input className="w-full border-b-[1px] pt-[10px] pb-4 border-[#F0F0F0] outline-none appearance-none" type="number" placeholder="Post Code" name="postCode" />
+                <input className="w-full border-b-[1px] pt-[10px] pb-4 border-[#F0F0F0] outline-none " type="number" placeholder="Post Code" name="postCode" />
               </div>
 
               <div className="w-full mt-6">
                 <label className="text-base text-[#262626] leading-[23px] font-dm font-bold">Phone *</label>
-                <input className="checkoutInput appearance-none " type="number" placeholder="Phone" name="phone" />
+                <input className="checkoutInput" type="number" placeholder="Phone" name="phone" />
               </div>
 
               <div className="w-full mt-6">
@@ -113,7 +113,7 @@ const CheckoutPage = () => {
 
             <h3 className="checkoutHeading">Additional Information</h3>
             <div>
-              <textarea className="block w-full h-[138px] border-b-[1px] border-[#F0F0F0] outline-none  placeholder:text-base  placeholder:text-[#262626]  placeholder:font-dm  placeholder:font-bold  placeholder:leading-[27px]" placeholder={'Other Notes (optional) \nNotes about your order, e.g. special notes for delivery.'} /> 
+              <textarea className="block w-full h-[138px] border-b-[1px] border-[#F0F0F0] outline-none  placeholder:text-base  placeholder:text-[#262626]  placeholder:font-dm  placeholder:font-bold  placeholder:leading-[27px]" placeholder={'Other Notes (optional) \nNotes about your order, e.g. special notes for delivery.'} />
             </div>
 
           </div>
