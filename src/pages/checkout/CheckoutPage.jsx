@@ -1,7 +1,7 @@
 import BreadCrumb from "../../components/utilities/BreadCrumb"
 import Paragraph from './../../components/utilities/Paragraph';
 import Input from './../../components/utilities/Input';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 const CheckoutPage = () => {
@@ -13,6 +13,40 @@ const CheckoutPage = () => {
   let [couponShow, setCouponShow] = useState(false)
 
   let countries = ['Bangladesh', 'India', 'Nepal', 'Pakistan', 'Thailan'];
+
+  let checkoutProudct = [
+    {
+      id: 0,
+      productName: "Apple",
+      price: 250,
+      quantity: 2,
+    },
+
+    {
+      id: 1,
+      productName: "Banna",
+      price: 150,
+      quantity: 3,
+    }
+    , {
+      id: 2,
+      productName: "Chicken",
+      price: 280,
+      quantity: 4,
+    }
+
+  ]
+
+
+  let [total, setTotal] = useState(0);
+
+  useEffect(() => {
+    for (let i = 0; i < checkoutProudct.length; i++) {
+      total += checkoutProudct[i].price * checkoutProudct[i].quantity
+      setTotal(total);
+    }
+  }, [])
+
 
 
 
@@ -112,13 +146,67 @@ const CheckoutPage = () => {
                   <input className="checkoutInput" type="email" placeholder="Email" name="emailAddress" />
                 </div>
 
-              </form>
 
-              <h3 className="checkoutHeading">Additional Information</h3>
-              <div className="mt-[42px]">
-                <label className="font-bold text-[#262626] text-[16px] leading-[27px]">Other Notes (optional)</label>
-                <textarea className="resize-none overflow-hidden block w-full h-[138px] mt-[10px] border-b-[1px] border-[#F0F0F0] outline-none  placeholder:text-[14px] placeholder:font-normal placeholder:text-[#767676]  placeholder:font-dm " placeholder={'Notes about your order, e.g. special notes for delivery.'} />
-              </div>
+
+                <div>
+                  <h3 className="checkoutHeading">Additional Information</h3>
+                  <div className="mt-[42px]">
+                    <label className="font-bold text-[#262626] text-[16px] leading-[27px]">Other Notes (optional)</label>
+                    <textarea className="resize-none overflow-hidden block w-full h-[138px] mt-[10px] border-b-[1px] border-[#F0F0F0] outline-none  placeholder:text-[14px] placeholder:font-normal placeholder:text-[#767676]  placeholder:font-dm " placeholder={'Notes about your order, e.g. special notes for delivery.'} />
+                  </div>
+                </div>
+
+
+                {/* Start Table Here */}
+                <h3 className="checkoutHeading capitalize">your order</h3>
+                <table className="w-[644px] mt-10">
+                  <tr>
+                    <td className="border border-[#F0F0F0] w-1/2 py-4 px-5">
+                      <h4 className="text-[#262626] text-[16px] font-bold leading-[23px] font-dm">Product</h4>
+                    </td>
+                    <td className="border border-[#F0F0F0] w-1/2 py-4 px-5">
+                      <p className="text-[#767676] font-normal leading-[30px] text-[16px] font-dm">Total</p>
+                    </td>
+                  </tr>
+
+                  <tbody>
+                    {checkoutProudct.map((item, index) => (
+                      <tr key={index}>
+                        <td className="border border-[#F0F0F0] w-1/2 py-4 px-5">
+                          <h4 className="text-[#262626] text-[16px] font-bold leading-[23px] font-dm">{item.productName} x {item.quantity}</h4>
+                        </td>
+                        <td className="border border-[#F0F0F0] w-1/2 py-4 px-5">
+                          <p className="text-[#767676] font-normal leading-[30px] text-[16px] font-dm">{item.quantity * item.price}$</p>
+                        </td>
+
+                      </tr>
+                    ))
+                    }
+                  </tbody>
+
+                  <tr>
+                    <td className="border border-[#F0F0F0] w-1/2 py-4 px-5">
+                      <h4 className="text-[#262626] text-[16px] font-bold leading-[23px] font-dm">Subtotal</h4>
+                    </td>
+                    <td className="border border-[#F0F0F0] w-1/2 py-4 px-5">
+                      <p className="text-[#767676] font-normal leading-[30px] text-[16px] font-dm">{500}$</p>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td className="border border-[#F0F0F0] w-1/2 py-4 px-5">
+                      <h4 className="text-[#262626] text-[16px] font-bold leading-[23px] font-dm">Total</h4>
+                    </td>
+                    <td className="border border-[#F0F0F0] w-1/2 py-4 px-5">
+                      <p className="text-[#767676] font-normal leading-[30px] text-[16px] font-dm">{total}$</p>
+                    </td>
+                  </tr>
+
+
+                </table>
+                {/* End Table Here */}
+
+              </form>
 
             </div>
             {/* form End here */}
