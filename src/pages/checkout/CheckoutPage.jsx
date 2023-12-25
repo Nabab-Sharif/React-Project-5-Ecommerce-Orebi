@@ -206,7 +206,34 @@ const CheckoutPage = () => {
                 </table>
                 {/* End Table Here */}
 
+
+
+                {/*.........Bank Proceed Start Here...........*/}
+                <div className="py-[32px] px-[34px] border-[1px] border-solid border-[#F0F0F0] mt-[60px] bg-[#FFF]">
+
+                  <div className="relative">
+                    <input type="radio" id="bank" name="bank_pro" value="Bank" className="peer/draft cursor-pointer accent-[#262626]" />
+                    <label htmlFor="bank" className="ms-[8px] text-[#767676] text-[16px] font-bold font-dm peer-checked/draft:text-[#262626] ">Bank</label>
+                    {/* pop up start*/}
+                    <div className="w-[985px] bg-[#F7F8F9] text-[#767676] text-[14px] py-[19px] px-[26px]  absolute top-[65px] hidden peer-checked/draft:block before:content-[''] before:block before:absolute before:left-[35px] before:top-[-10px]
+                    before:border-solid before:border-[#F7F8F9] before:border-t-0 before:border-r-[0.5px] before:border-b-[0.5px] before:border-l-[0] before:p-[10px] before:rotate-[-135deg] before:bg-[#F7F8F9]"> Pay via Bank; you can pay with your credit card if you don’t have a Bank account.
+                    </div>
+                    {/* pop up start */}
+
+                  </div>
+
+                  <div className="mt-[130px]">
+                    <input type="radio" id="bank2" name="bank_pro" value="Bank 2" className="peer/draft cursor-pointer accent-[#262626]" />
+                    <label htmlFor="bank2" className="ms-[8px] text-[#767676] text-[16px] font-bold font-dm peer-checked/draft:text-[#262626] ">Bank 2</label>
+                    <p className="text-[#767676] font-dm text-[16px] leading-[30px] mt-[15px]">Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our <a href="#" className="text-[#262626]">privacy policy</a> .</p>
+                  </div>
+
+                  <button type="submit" className="bg-[#262626] py-[16px] px-[47px]  text-[#FFFFFF] font-dm text-[14px] font-bold mt-[24px] ">Proceed to Bank</button>
+                </div>
+                {/*.........Bank Proceed End Here...........*/}
+
               </form>
+
 
             </div>
             {/* form End here */}
