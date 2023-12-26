@@ -3,6 +3,7 @@ import { RxCross2 } from "react-icons/rx";
 import Image from './../../components/utilities/Image';
 import product1 from '../../../src/assets/images/cartProduct-1.png'
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from "react";
 
 
 const CartPage = () => {
@@ -10,6 +11,30 @@ const CartPage = () => {
   let pathname = window.location.href;
   let pathArray = pathname.split("/");
   let finalPath = pathArray[pathArray.length - 1];
+
+  let [quantity, setQuantity] = useState(1);
+  let [cursor, setCoursor] = useState(true);
+
+
+  let increment = () => {
+    quantity++;
+    setQuantity(quantity)
+  }
+
+  let decrement = () => {
+    if (quantity > 1) {
+      quantity--;
+      setQuantity(quantity)
+    }
+  }
+
+  useEffect(() => {
+    if (quantity == 1) {
+      setCoursor(false);
+    } else {
+      setCoursor(true)
+    }
+  }, [quantity]);
 
 
   return (
@@ -24,7 +49,7 @@ const CartPage = () => {
           {/*............................Cart Table Start Here............................*/}
           <div className="mt-[136px] border border-[#F0F0F0]">
 
-            {/* table head */}
+            {/*.......table head.....*/}
             <div className="pt-[34px] pb-[32px] bg-[#F5F5F3] flex">
               <div className="px-5 w-[400px]">
                 <h5 className="text-base font-bold font-dm text-[#262626]">Product</h5>
@@ -41,8 +66,9 @@ const CartPage = () => {
 
             </div>
 
-            {/* table body */}
+            {/*......table body......*/}
             <div>
+              {/* item start here */}
               <div className="border-b border-[#F0F0F0] py-[30px] flex items-center">
 
                 <div className="pl-5 w-[400px] flex items-center">
@@ -63,9 +89,9 @@ const CartPage = () => {
 
                 <div className="px-5 w-[400px]">
                   <div className="border border-[#F0F0F0] h-[36px] w-[140px] px-5 flex justify-between items-center">
-                    <button className="text-[#767676] text-[25px] font-dm font-normal leading-[30px]">-</button>
-                    <span className="font-dm text-[18px] text-[#767676] font-normal leading-[30px]">2</span>
-                    <button className="text-[#767676] text-[25px] font-dm font-normal leading-[30px]">+</button>
+                    <button onClick={decrement} className={`text-[#767676] text-[25px] font-dm font-normal leading-[30px] ${cursor ? "cursor-pointer" : "cursor-not-allowed"}`}>-</button>
+                    <span className="font-dm text-[18px] text-[#767676] font-normal leading-[30px]">{quantity}</span>
+                    <button onClick={increment} className="text-[#767676] text-[25px] font-dm font-normal leading-[30px]">+</button>
                   </div>
                 </div>
 
@@ -74,8 +100,78 @@ const CartPage = () => {
                 </div>
 
               </div>
+              {/* item end here */}
+
+              {/* item start here */}
+              <div className="border-b border-[#F0F0F0] py-[30px] flex items-center">
+
+                <div className="pl-5 w-[400px] flex items-center">
+                  <div className="cursor-pointer text-[#262626] text-[17px]">
+                    <RxCross2 />
+                  </div>
+                  <div className="h-[100px] w-[100px] ml-10">
+                    <Image source={product1} alt="cartProduct.png" />
+                  </div>
+                  <div className="ml-5">
+                    <h5 className="text-[#262626] text-base font-bold capitalize">Product name</h5>
+                  </div>
+                </div>
+
+                <div className="px-5 w-[400px]">
+                  <h5 className="text-[#262626] text-xl font-dm leading-normal font-bold"> $44.00</h5>
+                </div>
+
+                <div className="px-5 w-[400px]">
+                  <div className="border border-[#F0F0F0] h-[36px] w-[140px] px-5 flex justify-between items-center">
+                    <button onClick={decrement} className={`text-[#767676] text-[25px] font-dm font-normal leading-[30px] ${cursor ? "cursor-pointer" : "cursor-not-allowed"}`}>-</button>
+                    <span className="font-dm text-[18px] text-[#767676] font-normal leading-[30px]">{quantity}</span>
+                    <button onClick={increment} className="text-[#767676] text-[25px] font-dm font-normal leading-[30px]">+</button>
+                  </div>
+                </div>
+
+                <div className="px-5 w-[400px]">
+                  <h5 className="text-[#262626] text-xl font-dm leading-normal font-bold"> $44.00</h5>
+                </div>
+
+              </div>
+              {/* item end here */}
+
+              {/* item start here */}
+              <div className="border-b border-[#F0F0F0] py-[30px] flex items-center">
+
+                <div className="pl-5 w-[400px] flex items-center">
+                  <div className="cursor-pointer text-[#262626] text-[17px]">
+                    <RxCross2 />
+                  </div>
+                  <div className="h-[100px] w-[100px] ml-10">
+                    <Image source={product1} alt="cartProduct.png" />
+                  </div>
+                  <div className="ml-5">
+                    <h5 className="text-[#262626] text-base font-bold capitalize">Product name</h5>
+                  </div>
+                </div>
+
+                <div className="px-5 w-[400px]">
+                  <h5 className="text-[#262626] text-xl font-dm leading-normal font-bold"> $44.00</h5>
+                </div>
+
+                <div className="px-5 w-[400px]">
+                  <div className="border border-[#F0F0F0] h-[36px] w-[140px] px-5 flex justify-between items-center">
+                    <button onClick={decrement} className={`text-[#767676] text-[25px] font-dm font-normal leading-[30px] ${cursor ? "cursor-pointer" : "cursor-not-allowed"}`}>-</button>
+                    <span className="font-dm text-[18px] text-[#767676] font-normal leading-[30px]">{quantity}</span>
+                    <button onClick={increment} className="text-[#767676] text-[25px] font-dm font-normal leading-[30px]">+</button>
+                  </div>
+                </div>
+
+                <div className="px-5 w-[400px]">
+                  <h5 className="text-[#262626] text-xl font-dm leading-normal font-bold"> $44.00</h5>
+                </div>
+
+              </div>
+              {/* item end here */}
+
             </div>
-            {/* table footer */}
+            {/*......table footer......*/}
             <div className="py-[34px] px-5 text-right">
               <button className="text-base capitalize text-[#ede7e7] font-dm font-bold hover:text-black hover:bg-orange-300 py-4 px-5 bg-gray-600">Update Cart</button>
             </div>
