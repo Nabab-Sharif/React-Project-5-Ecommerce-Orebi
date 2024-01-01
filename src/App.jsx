@@ -8,6 +8,12 @@ import Contact from "./pages/contact/Contact"
 import Journal from "./pages/journal/Journal"
 import CartPage from "./pages/viewCart/CartPage"
 import CheckoutPage from "./pages/checkout/CheckoutPage"
+import Myaccount from "./pages/myAccount/Index"
+import Dashboard from './pages/myAccount/Dashboard';
+import Others from './pages/myAccount/Others';
+import Download from './pages/myAccount/Download';
+import Address from './pages/myAccount/Address';
+import AccountDetails from './pages/myAccount/AccountDetails';
 
 
 
@@ -25,6 +31,13 @@ const App = () => {
           <Route path="/journal" element={<Journal />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/checkout" element={<CheckoutPage />} />
+          <Route element={<Myaccount />}>
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/others" element={<Others />} />
+            <Route path="/download" element={<Download />} />
+            <Route path="/address" element={<Address />} />
+            <Route path="/accountdetails" element={<AccountDetails />} />
+          </Route>
           <Route path="*" element={<Error />} />
         </Route>
       </>
