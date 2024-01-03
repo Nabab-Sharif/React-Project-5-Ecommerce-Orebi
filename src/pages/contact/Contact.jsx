@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import BreadCrumb from "../../components/utilities/BreadCrumb"
 import Input from './../../components/utilities/Input';
 import Accordion from "./Accordion";
@@ -36,6 +37,17 @@ const Contact = () => {
 
   ]
 
+  // For Textarea 
+  const textAreaRef = useRef(null);
+
+  const handleInputChange = () => {
+    const { current } = textAreaRef;
+    current.style.height = 'auto';
+    current.style.height = `${current.scrollHeight}px`;
+  };
+
+
+
 
   return (
     <section>
@@ -60,7 +72,7 @@ const Contact = () => {
 
           <div className="flex flex-col">
             <label className="font-dm text-[#262626] text-base font-bold leading-[23px]" htmlFor="name">Message</label>
-            <textarea className="border-b border-[#F0F0F0] outline-none py-3 h-[138px]  resize-none" placeholder="Your message here" ></textarea>
+            <textarea ref={textAreaRef} className="border-b border-[#F0F0F0] outline-none  py-3 h-[138px] resize-none" placeholder="Your message here" onChange={handleInputChange}></textarea>
           </div>
 
           <button className="bg-[#262626] text-white text-base font-bold font-dm py-[16px] px-[85px] w-max mt-[7px]">Post</button>
