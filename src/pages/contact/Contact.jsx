@@ -85,7 +85,7 @@ const Contact = () => {
 
           {/* Accordion in Google Map */}
           <div className="h-[450px] w-[400px] bg-white absolute left-20 top-20 py-[30px] px-[20px]">
-            <Accordion sections={AccordionSections} />
+            <Accordion sections={AccordionSections} activeSectionIndex={2} />
           </div>
 
         </div>

@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 
-const Accordion = ({ sections }) => {
+const Accordion = ({ sections, activeSectionIndex }) => {
 
-  const [activeSection, setActiveSection] = useState(null);
+  const [activeSection, setActiveSection] = useState(activeSectionIndex);
 
   const toggleSection = (index) => {
     setActiveSection(activeSection === index ? null : index);
