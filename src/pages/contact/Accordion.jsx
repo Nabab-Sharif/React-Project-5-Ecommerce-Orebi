@@ -21,7 +21,7 @@ const Accordion = ({ sections, activeSectionIndex }) => {
               <div className="flex justify-between items-center">
                 <p className="text-[#262626] text-[16px] font-bold font-dm leading-[23px] mb-[20px]">{section.title}</p>
                 <button onClick={() => toggleSection(index)} className="text-[20px] text-[#262626] font-bold">
-                  {activeSection === index ? '+' : '-'}
+                  {activeSection === index ? '-' : '+'}
                 </button>
               </div>
 
