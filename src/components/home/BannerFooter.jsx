@@ -16,12 +16,12 @@ const BannerFooter = () => {
 
             <div className="flex items-center gap-x-4">
               <MdLocalShipping className="text-2xl" />
-              <p className="text-base font-dm font-normal leading-normal text-[#6D6D6D]">Two years warranty</p>
+              <p className="text-base font-dm font-normal leading-normal text-[#6D6D6D]">Free shipping</p>
             </div>
 
             <div className="flex items-center gap-x-4">
               <SlReload className="text-2xl" />
-              <p className="text-base font-dm font-normal leading-normal text-[#6D6D6D]">Two years warranty</p>
+              <p className="text-base font-dm font-normal leading-normal text-[#6D6D6D]">Return policy in 30 days</p>
             </div>
 
           </div>
