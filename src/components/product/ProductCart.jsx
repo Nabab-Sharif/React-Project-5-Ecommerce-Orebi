@@ -2,16 +2,36 @@ import Image from './../utilities/Image';
 import { FaHeart } from "react-icons/fa";
 import { TbRefresh } from "react-icons/tb";
 import { FaShoppingCart } from "react-icons/fa";
-import newArrivalsImage from '../../../src/assets/images/newArrivalsImg1.png'
+import { useEffect, useState } from 'react';
 
 
-const ProductCart = () => {
+
+const ProductCart = ({ productImage, productName, productPrice, discount, isNew }) => {
+
+
+  let [newProduct, setNewProduct] = useState(false);
+
+  useEffect(() => {
+    if (isNew) {
+      setNewProduct(true)
+    } else {
+      setNewProduct(false);
+    }
+  }, [isNew])
+
+
   return (
     <>
       <div>
 
         <div className="h-[370px] bg-emerald-400 relative group overflow-hidden shadow-lg">
-          <Image source={newArrivalsImage} alt="newArrivalsImg1.png" className="w-full h-full object-cover" />
+          <Image source={productImage} alt="newArrivalsImg1.png" className="w-full h-full object-cover" />
+
+          {newProduct &&
+
+            <span className='px-8 py-2 bg-[#262626] text-white font-dm text-xs font-bold absolute left-4 top-4'>New</span>
+          }
+
 
           {/*.......Image hover popup Part Start........*/}
           <div className='w-full h-[200px] bg-white absolute left-0 bottom-0 translate-y-[100%] group-hover:translate-y-0 transition-all duration-500 p-[30px]'>
@@ -36,8 +56,8 @@ const ProductCart = () => {
         </div>
 
         <div className='mt-6 flex justify-between'>
-          <h5 className='font-dm text[#262626] text-xl font-bold capitalize'>smart watch</h5>
-          <span className='font-dm text-[#767676] text-base font-normal leading-[30px]'>44.00</span>
+          <h5 className='font-dm text[#262626] text-xl font-bold capitalize'>{productName}</h5>
+          <span className='font-dm text-[#767676] text-base font-normal leading-[30px]'>${productPrice}</span>
         </div>
 
       </div>
