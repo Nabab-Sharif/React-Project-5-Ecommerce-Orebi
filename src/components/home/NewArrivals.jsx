@@ -8,6 +8,50 @@ import productImage4 from '../../../src/assets/images/newArrivalsImg4.png'
 
 
 const NewArrivals = () => {
+
+  let allProduct = [
+    {
+      id: 0,
+      productName: "Basic Crew Neck Tee",
+      productPrice: 44,
+      productImage: productImage1,
+      isNew: "true",
+      discount: "false",
+      color: "black"
+    },
+    {
+      id: 1,
+      productName: "Watch",
+      productPrice: 340,
+      productImage: productImage2,
+      isNew: "false",
+      discount: 15,
+      color: 'false'
+    },
+    {
+      id: 2,
+      productName: "Basic Crew Neck Tee",
+      productPrice: 54,
+      productImage: productImage3,
+      isNew: "true",
+      discount: "false",
+      color: 'red'
+    },
+    {
+      id: 3,
+      productName: "Basic Crew Neck Tee",
+      productPrice: 74,
+      productImage: productImage4,
+      isNew: "false",
+      discount: 20,
+      color: 'false'
+    }
+  ]
+
+
+
+
+
   return (
     <>
       <section className='pb-[128px]'>
@@ -16,10 +60,13 @@ const NewArrivals = () => {
 
           {/* Products Cart Start Here */}
           <div className='grid grid-cols-4 gap-10 mt-12'>
-            <ProductCart productImage={productImage1} productName="Basic Crew Neck Tee" productPrice="44" discount="false" isNew={false} />
-            <ProductCart productImage={productImage2} productName="Basic Crew Neck Tee" productPrice="44" discount="false" isNew={true} />
-            <ProductCart productImage={productImage3} productName="Basic Crew Neck Tee" productPrice="44" discount="false" isNew={false} />
-            <ProductCart productImage={productImage4} productName="Basic Crew Neck Tee" productPrice="44" discount="false" isNew={true} />
+
+            {
+              allProduct.map((item, index) => (
+                <ProductCart key={index} productImage={item.productImage} productName={item.productName} productPrice={item.productPrice} discount={item.discount} isNew={item.isNew} color={item.color} />
+              ))
+            }
+
           </div>
           {/* Products Cart End Here */}
 
