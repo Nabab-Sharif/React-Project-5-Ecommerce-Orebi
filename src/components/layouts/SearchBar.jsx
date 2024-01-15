@@ -89,7 +89,7 @@ const SearchBar = () => {
 
 
             {/* right part userAccount and CartPopup Start*/}
-            <div className="flex items-center gap-x-10">
+            <div className="flex items-center gap-x-10 z-30">
 
               <div ref={userAccountRef} className="relative">
                 <div className="flex items-center gap-x-[10px] cursor-pointer">
