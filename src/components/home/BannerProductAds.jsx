@@ -13,7 +13,7 @@ const BannerProductAds = () => {
         <div className="max-w-container mx-auto">
           <div className="grid grid-cols-2 gap-x-10">
 
-            {/* left Side  */}
+            { /* left Side  */}
             <div className="h-[780px] overflow-hidden">
               <Link to="#">
                 <Image className="w-full h-full object-contain" source={productAdImage1} alt="product_Ad1.svg" />
