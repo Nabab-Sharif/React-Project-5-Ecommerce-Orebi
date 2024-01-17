@@ -25,7 +25,7 @@ const ProductCart = ({ productImage, productName, productPrice, discount, isNew,
     <>
       <div>
 
-        <div className="h-[370px] bg-emerald-400 relative group overflow-hidden shadow-lg">
+        <div className="h-[370px] relative group overflow-hidden shadow-lg w-full">
           <Link to="#">
             <Image source={productImage} alt="newArrivalsImg1.png" className="w-full h-full object-cover" />
           </Link>

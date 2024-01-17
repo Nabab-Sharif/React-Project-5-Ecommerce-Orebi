@@ -29,3 +29,27 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+/* NewArrivals Swiper slider style */
+.swiper-button-prev,
+.swiper-button-next {
+  top: 40%;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #979797;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 19px;
+  color: white;
+}
