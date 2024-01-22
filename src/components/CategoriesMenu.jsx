@@ -19,7 +19,7 @@ const CategoriesMenu = () => {
 
   return (
     <>
-      <div className="w-[263px] bg-[#262626] absolute left-0 mt-5">
+      <div className="w-[263px] bg-[#262626] absolute left-0 mt-5 z-30">
         <List className="h-[500px] overflow-y-scroll">
 
           {categoryData?.map((item, index) => (
