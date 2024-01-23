@@ -14,6 +14,7 @@ import Others from './pages/myAccount/Others';
 import Download from './pages/myAccount/Download';
 import Address from './pages/myAccount/Address';
 import AccountDetails from './pages/myAccount/AccountDetails';
+import SingleProduct from './pages/product/SingleProduct';
 
 
 
@@ -31,6 +32,7 @@ const App = () => {
           <Route path="/journal" element={<Journal />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path='/product/:id' element={<SingleProduct />} />
           <Route element={<Myaccount />}>
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/others" element={<Others />} />

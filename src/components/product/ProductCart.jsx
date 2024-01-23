@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 
 
-const ProductCart = ({ productImage, productName, productPrice, discount, isNew, color }) => {
+const ProductCart = ({ productImage, productName, productPrice, discount, isNew, color, id }) => {
 
 
   let [newProduct, setNewProduct] = useState(false);
@@ -26,7 +26,7 @@ const ProductCart = ({ productImage, productName, productPrice, discount, isNew,
       <div>
 
         <div className="h-[370px] relative group overflow-hidden shadow-lg w-full">
-          <Link to="#">
+          <Link to={`/product/${id}`}>
             <Image source={productImage} alt="newArrivalsImg1.png" className="w-full h-full object-cover" />
           </Link>
 

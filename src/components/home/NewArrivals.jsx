@@ -105,7 +105,7 @@ const NewArrivals = () => {
               {
                 allProduct.map((item, index) => (
                   <SwiperSlide key={index} >
-                    <ProductCart productImage={item.productImage} productName={item.productName} productPrice={item.productPrice} discount={item.discount} isNew={item.isNew} color={item.color} />
+                    <ProductCart productImage={item.productImage} productName={item.productName} productPrice={item.productPrice} discount={item.discount} isNew={item.isNew} color={item.color} id={item.id} />
                   </SwiperSlide>
                 ))
               }
