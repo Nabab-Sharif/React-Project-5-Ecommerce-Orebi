@@ -14,7 +14,8 @@ let newArrivalsProduct = [
     productImage: product1,
     isNew: "true",
     discount: "false",
-    color: "black"
+    color: "black",
+    stock: 50,
   },
   {
     id: 1,
@@ -23,7 +24,8 @@ let newArrivalsProduct = [
     productImage: product2,
     isNew: "false",
     discount: 15,
-    color: 'false'
+    color: 'false',
+    stock: 0,
   },
   {
     id: 2,
@@ -32,7 +34,8 @@ let newArrivalsProduct = [
     productImage: product3,
     isNew: "true",
     discount: "false",
-    color: 'red'
+    color: 'red',
+    stock: 17,
   },
   {
     id: 3,
@@ -41,7 +44,8 @@ let newArrivalsProduct = [
     productImage: product4,
     isNew: "false",
     discount: 20,
-    color: 'false'
+    color: 'false',
+    stock: 12,
   }
   ,
   {
@@ -51,7 +55,8 @@ let newArrivalsProduct = [
     productImage: product2,
     isNew: "false",
     discount: 20,
-    color: 'false'
+    color: 'false',
+    stock: 0,
   }
   ,
   {
@@ -61,7 +66,8 @@ let newArrivalsProduct = [
     productImage: product3,
     isNew: "false",
     discount: 20,
-    color: 'false'
+    color: 'false',
+    stock: 3,
   }
 ]
 
