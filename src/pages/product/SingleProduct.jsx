@@ -142,6 +142,68 @@ const SingleProduct = () => {
           </div>
           {/*............Single Products Details End..............*/}
 
+
+          {/*............Review Post Start............*/}
+          <div>
+
+            <div className='mt-[123px]'>
+              {/* description and reviews */}
+              <div>
+                <span className='text-[#767676] text-[20px] font-normal leading-[29px] font-dm inline-block'>Description</span>
+                <span className='text-[#262626] text-[20px] font-bold leading-[29px] font-dm inline-block ml-[65px]'>Reviews (1)</span>
+                <a className='block mt-[42px] text-[#767676] text-[14px] leading-[30px] font-dm cursor-pointer'><span>1</span> review for Product</a>
+                <div className='bg-[#F0F0F0] h-[1px] w-full mt-[24px] mb-[31px]'></div>
+              </div>
+              {/* Review Person details  */}
+              <div>
+                <div className='flex justify-between'>
+                  <div className='flex gap-x-[37px] items-center'>
+                    <h3>Sharif</h3>
+                    <div className='flex gap-x-1'>
+                      <FaStar className='text-[#FFD881] text-[12px]' />
+                      <FaStar className='text-[#FFD881] text-[12px]' />
+                      <FaStar className='text-[#FFD881] text-[12px]' />
+                      <FaStar className='text-[#FFD881] text-[12px]' />
+                      <FaStar className='text-[#FFD881] text-[12px]' />
+                    </div>
+                  </div>
+                  <p><span>6</span> months ago</p>
+                </div>
+                <div>
+                  <p className='mt-[14px] text-[16px] text-[#767676] font-dm leading-[30px] font-normal'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                  </p>
+                </div>
+                <div className='bg-[#F0F0F0] h-[1px] w-full mt-[24px] mb-[31px]'></div>
+              </div>
+            </div>
+
+            {/* Add a Review Form */}
+            <div>
+              <h4 className='text-[#262626] text-[20px] font-bold leading-normal mt-[53px] mb-[48px]'>Add a Review</h4>
+              <form>
+                <div className='w-[779px] border-b-[1px] border-[#F0F0F0]'>
+                  <label htmlFor="name" className='block text-[#262626] text-[16px] font-bold font-dm leading-[23px]'>Name</label>
+                  <input type="text" placeholder='Your name here' className='w-full pt-[10px] pb-[17px] text-[#767676] text-[14px] font-dm font-normal leading-normal border-none outline-none' />
+                </div>
+
+                <div className='mt-[23px] w-[779px] border-b-[1px] border-[#F0F0F0]'>
+                  <label htmlFor="name" className='block text-[#262626] text-[16px] font-bold font-dm leading-[23px]'>Email</label>
+                  <input type="text" placeholder='Your email here' className='w-full pt-[10px] pb-[17px] text-[#767676] text-[14px] font-dm font-normal leading-normal border-none outline-none' />
+                </div>
+
+                <div className='mt-[23px] w-[779px] border-b-[1px] border-[#F0F0F0]'>
+                  <label htmlFor="name" className='block text-[#262626] text-[16px] font-bold font-dm leading-[23px]'>Review</label>
+                  <textarea placeholder='Your review here' className='resize-none w-full pt-[10px] pb-[87px] text-[#767676] text-[14px] font-dm font-normal leading-normal border-none outline-none' />
+                </div>
+
+                <div className='mt-[29px]'>
+                  <button type='submit' className='py-[16px] px-[81px] bg-black text-[14px] text-[#FFFFFF] font-bold font-dm leading-normal mb-[250px]'>Post</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          {/*............Review Post End..............*/}
+
         </div>
       </div>
     </>
